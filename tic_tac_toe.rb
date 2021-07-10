@@ -46,7 +46,7 @@ class GameBoard
   end
 
   def display_board
-    puts "[ #{@game_board[0][0].character}  #{@game_board[0][1].character}  #{@game_board[0][2].character} ]\n[ #{@game_board[1][0].character}  #{@game_board[1][1].character}  #{@game_board[1][2].character} ]\n[ #{@game_board[2][0].character}  #{@game_board[2][1].character}  #{@game_board[2][2].character} ]"
+    puts "\t\t\t\t\t\t #{@game_board[0][0].character} | #{@game_board[0][1].character} | #{@game_board[0][2].character}\n\t\t\t\t\t\t--- --- ---\n\t\t\t\t\t\t #{@game_board[1][0].character} | #{@game_board[1][1].character} | #{@game_board[1][2].character}\n\t\t\t\t\t\t--- --- ---\n\t\t\t\t\t\t #{@game_board[2][0].character} | #{@game_board[2][1].character} | #{@game_board[2][2].character}"
   end
 
   def game_move (player)
@@ -61,9 +61,9 @@ class GameBoard
       puts "[#{container_index}][#{position}]"
       unless @game_board[container_index][position].filled
         @game_board[container_index][position].character = player.character
-        @game_board[container_index][position].filled = truee
+        @game_board[container_index][position].filled = true
       else
-        puts "Turn skipped."
+        puts 'Turn skipped.'
       end
     end
   end
